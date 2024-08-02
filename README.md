@@ -1,6 +1,6 @@
 # Hu Moments and K-Nearest Neighbors Project
 
-This project involves the implementation of a K-Nearest Neighbors (K-NN) algorithm combined with Hu Moments to classify image textures. The program calculates Hu Moments for a set of images and uses them as features for the K-NN classifier.
+This project involves the implementation of a K-Nearest Neighbors (K-NN) algorithm combined with Hu Moments to classify image formats. The program calculates Hu Moments for a set of images and uses them as features for the K-NN classifier.
 
 ## Project Structure
 
