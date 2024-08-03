@@ -38,6 +38,7 @@ The Hu Moments are calculated for each image, providing a 7-element feature vect
 ![image](https://github.com/user-attachments/assets/fbb30271-a81b-4235-a344-51af74abc185)
 
 - Searching images
+
 ![image](https://github.com/user-attachments/assets/46c7816d-428c-42e6-b6d5-05f7113e6633)
 
 ![image](https://github.com/user-attachments/assets/054138f7-e39f-4654-b98e-cb8205f21eca)
