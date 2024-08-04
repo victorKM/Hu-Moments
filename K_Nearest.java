@@ -109,7 +109,7 @@ public class K_Nearest implements PlugInFilter {
         if (ans >=1 && ans <= 3) {
             BufferedReader reader;
             try {
-                File file = new File ("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\Hu.txt");
+                File file = new File ("plugins\\huMoments\\Hu.txt");
                 reader = new BufferedReader(new FileReader(file));
                 String line = reader.readLine();
                 str = line.split(";", 8);
@@ -179,7 +179,7 @@ public class K_Nearest implements PlugInFilter {
     public void imgReference(ImagePlus imp)
     {
         try {
-            FileWriter myWriter = new FileWriter("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\Hu.txt");
+            FileWriter myWriter = new FileWriter("plugins\\huMoments\\Hu.txt");
             ImageAccess input = new ImageAccess(imp.getProcessor());
             String str = "";
             double[] hu = Momentos_Hu.momentosHu(input);
@@ -214,7 +214,7 @@ public class K_Nearest implements PlugInFilter {
     public void WriteOnHuTxt(String[] list, String dir)
     {
         try {
-            FileWriter myWriter = new FileWriter("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\Hu.txt", true);
+            FileWriter myWriter = new FileWriter("plugins\\huMoments\\Hu.txt", true);
 
             /*  PASSA POR TODAS AS IMAGENS DA PASTA */
             for (int i=0; i<list.length; i++) {
@@ -253,7 +253,7 @@ public class K_Nearest implements PlugInFilter {
     public void CreationHuTxt()
     {
         try {
-            File myObj = new File("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\Hu.txt");
+            File myObj = new File("plugins\\huMoments\\Hu.txt");
             if (myObj.createNewFile()) {
               System.out.println("File created: " + myObj.getName());
             } else {
@@ -268,7 +268,7 @@ public class K_Nearest implements PlugInFilter {
     public void CreationFuncDistTxt()
     {
         try {
-            File myObj = new File("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\FuncDist.txt");
+            File myObj = new File("plugins\\huMoments\\FuncDist.txt");
             if (myObj.createNewFile()) {
               System.out.println("File created: " + myObj.getName());
             } else {
@@ -283,7 +283,7 @@ public class K_Nearest implements PlugInFilter {
     public void WriteOnFuncDistTxt(List<Imagem> imagens) 
     {
         try {
-            FileWriter myWriter = new FileWriter("C:\\Faculdade\\ImageJ\\plugins\\huMoments\\FuncDist.txt");
+            FileWriter myWriter = new FileWriter("plugins\\huMoments\\FuncDist.txt");
             String str = "";
             for (int i = 0; i < k+1; i++) {
                 str = " [ ";
@@ -293,7 +293,7 @@ public class K_Nearest implements PlugInFilter {
                 myWriter.write(str);
                 myWriter.write(imagens.get(i).img_name);
                 myWriter.write("\n");
-                ImagePlus image = new Opener().openImage("C:\\Faculdade\\ImageJ\\imagens", imagens.get(i).img_name); 
+                ImagePlus image = new Opener().openImage("imagens", imagens.get(i).img_name); 
                 if (image != null) {
                     image.show();
                 }
